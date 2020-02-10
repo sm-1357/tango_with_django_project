@@ -26,7 +26,7 @@ def index(request):
 
     # Call the helper function to handle the cookies.
     visitor_cookie_handler(request)
-    
+
 
     # Return response back to the user, updating any cookies that need changed.
     response = render(request, 'rango/index.html', context=context_dict)
@@ -215,7 +215,7 @@ def user_login(request):
 
 @login_required
 def restricted(request):
-    return render("Since you're logged in, you can see this text!", 'rango/restricted.html')
+    return render(request, 'rango/restricted.html')
 
 @login_required
 def user_logout(request):
