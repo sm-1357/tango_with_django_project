@@ -158,7 +158,7 @@ def register(request):
             # If so, we need to get it from the input forms
             # put it in the UserProfile model.
             if 'picture' in request.FILES:
-                profile.picture = request.FILES('picture')
+                profile.picture = request.FILES['picture']
 
             # NOw svae userProfile.
             profile.save()
